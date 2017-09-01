@@ -1,0 +1,12 @@
+#!/bin/bash
+# Update version numbers and the path to your local .m2/repository as necessary
+
+
+COREPATH="./sketches-core-0.10.0.jar"
+MEMORYPATH="./memory-0.10.2.jar"
+MISCPATH="./target/sketches-misc-0.8.3-SNAPSHOT.jar"
+COMMONSCLI="./commons-cli-1.4.jar"
+
+CLSPATH="$COREPATH:$MEMORYPATH:$MISCPATH:$COMMONSCLI"
+
+java -cp $CLSPATH com.yahoo.sketches.cmd.CommandLine $@
